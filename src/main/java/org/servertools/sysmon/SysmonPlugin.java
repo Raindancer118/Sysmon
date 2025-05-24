@@ -22,7 +22,7 @@ public class SysmonPlugin extends JavaPlugin implements TabExecutor {
 
     @Override
     public void onEnable() {
-        getLogger().info("[Sysmon] Sysmon gestartet.");
+        getLogger().info("Sysmon gestartet.");
         csvFile = new File(getDataFolder(), "sysmon.csv");
 
         if (!csvFile.exists()) {
@@ -141,7 +141,7 @@ public class SysmonPlugin extends JavaPlugin implements TabExecutor {
 
     private void logToBoth(CommandSender sender, String msg) {
         sender.sendMessage(msg);
-        getLogger().info("[Sysmon] " + msg.replaceAll("§.", ""));
+        getLogger().info(" " + msg.replaceAll("§.", ""));
     }
 
     @Override
